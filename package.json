@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:socket\"",
     "dev:next": "next dev --turbopack",
-    "dev:socket": "node socket.js",
+    "dev:socket": "node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,9 +13,11 @@
   "dependencies": {
     "concurrently": "^9.1.2",
     "express": "^4.21.2",
+    "mysql2": "^3.14.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sequelize": "^6.37.6",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "uuid": "^11.1.0"
