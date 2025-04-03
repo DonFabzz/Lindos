@@ -5,26 +5,31 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:socket\"",
     "dev:next": "next dev --turbopack",
-    "dev:socket": "node server.js",
+    "dev:socket": "ts-node -r tsconfig-paths/register src/server.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mysql2": "^3.14.0",
     "next": "15.2.3",
+    "pg-hstore": "^2.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sequelize": "^6.37.6",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/express": "^5.0.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
