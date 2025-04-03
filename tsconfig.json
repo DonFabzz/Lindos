@@ -7,8 +7,8 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "commonjs", // Change to commonjs
+    "moduleResolution": "node", // Change to node
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -22,6 +22,16 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/models/roads.js", "src/models/players.js", "src/models/cities.js", "src/models/boardBoxes.js", "src/models/board.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/models/roads.ts",
+    "src/models/players.ts",
+    "src/models/cities.ts",
+    "src/models/boardBoxes.ts",
+    "src/models/board.ts"
+  ],
   "exclude": ["node_modules"]
 }
